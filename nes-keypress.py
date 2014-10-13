@@ -93,8 +93,20 @@ def getConfig():
 
     verbose = input.verbose
     input_file = open(input.input_file)
-  
-    return json.load(input_file)
+
+    # Validate the input file
+    config = json.load(input_file)
+
+    if 'latch_pin' not in config:
+        raise Exception('Config is missing latch_pin index')
+    if 'clock_pin' not in config:
+        raise Exception('Config is missing clock_pin index')
+    if 'data_pin' not in config:
+        raise Exception('Config is missing data_pin index')
+    if 'key_map' not in config:
+        raise Exception('Config is missing key_map index')
+
+    return config
 
 ##
 # Setup the NES GPIO ports
