@@ -103,8 +103,8 @@ def getConfig():
         raise Exception('Config is missing clock_pin index')
     if 'data_pin' not in config:
         raise Exception('Config is missing data_pin index')
-    if 'key_map' not in config:
-        raise Exception('Config is missing key_map index')
+    if 'key_mapping' not in config:
+        raise Exception('Config is missing key_mapping index')
 
     return config
 
