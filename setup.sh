@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add Init Scripts
-sudo cp daemons/nes-keypress /etc/init.d/nes-keypress
+sudo cp nes-keypress /etc/init.d/nes-keypress
 sudo chmod 775 /etc/init.d/nes-keypress
 sudo update-rc.d nes-keypress defaults
 
