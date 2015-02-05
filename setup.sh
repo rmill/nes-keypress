@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get update -y
+
 # Add Init Scripts
 sudo cp nes-keypress /etc/init.d/nes-keypress
 sudo chmod 775 /etc/init.d/nes-keypress
@@ -12,7 +14,7 @@ sudo cp configs/controller1.json /.nes-keypress/controller1.json
 sudo cp configs/controller2.json /.nes-keypress/controller2.json
 
 # Install Python Libraries
-sudo apt-get install python-rpi.gpio python3-rpi.gpio libudev-dev
+sudo apt-get install -y python-rpi.gpio python3-rpi.gpio libudev-dev
 
 # Install the uinput library
 cd lib/python-uinput-0.9
